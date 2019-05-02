@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 
 export const useResizeObserver = (ref, fn) => {
-  const [sizes, setSizes] = useState([])
+  const [sizes, setSizes] = useState({})
 
   const handleResize = entries => {
     const [entry] = entries.map(entry => entry)

@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import ResizeObserver from 'resize-observer-polyfill'
 
+// TODO: allow optional function to run side effects on resize.
 export const useResizeObserver = ref => {
   const [sizes, setSizes] = useState([])
 

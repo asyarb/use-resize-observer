@@ -5,7 +5,10 @@ export const useResizeObserver = (ref, fn) => {
 
   const handleResize = entries => {
     const [entry] = entries.map(entry => entry)
-    if (fn) fn(entry)
+    if (fn) {
+      fn(entry)
+      return
+    }
 
     setSizes(entry.contentRect)
   }

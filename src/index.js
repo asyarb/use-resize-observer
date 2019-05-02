@@ -1,17 +1,20 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 export const useResizeObserver = (ref, fn) => {
   const [sizes, setSizes] = useState({})
 
-  const handleResize = entries => {
-    const [entry] = entries.map(entry => entry)
-    if (fn) {
-      fn(entry)
-      return
-    }
+  const handleResize = useCallback(
+    entries => {
+      const [entry] = entries.map(entry => entry)
+      if (fn) {
+        fn(entry)
+        return
+      }
 
-    setSizes(entry.contentRect)
-  }
+      setSizes(entry.contentRect)
+    },
+    [fn]
+  )
 
   const [resizeObs] = useState(() => new ResizeObserver(handleResize))
 

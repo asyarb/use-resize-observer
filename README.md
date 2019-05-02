@@ -7,10 +7,12 @@ React implementation of the [Resize Observer API] to tell you when an element re
 # Features
 
 - 🎣 **Hooks API** - With `useResizeObserver` it's easier than ever to monitor the size changes of your elements.
-- 💨 **Optimized Performance** - Attempts to reuse Resize Observer instances when possible.
-- ⚙️ **Same native API** - Intuitive to use.
-- ⚛ **Dynamically Polyfilled** - By using [`resize-observer-polyfill`](https://github.com/thebuilder/react-intersection-observer), we dynamically include a polyfill for older browsers.
-- 💥 **Tiny Bundle**
+- ⚙️ **Simple Native API** - Intuitive to use.
+- 💨 **Optimized Performance** - Attempts to reuse Resize Observer instances whenever possible.
+- 💥 **Tiny Footprint**
+
+> ⚠️ It's recommended to add [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill)
+> for full browser support. This package dynamically polyfills ResizeObserver based on the browser.
 
 # Installation
 

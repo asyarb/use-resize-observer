@@ -79,8 +79,8 @@ const Example = () => {
 
 ### Provide a DOM element
 
-`useResizeObserver` can also take an `HTMLElement` such as the return value from
-`document.querySelector()` instead of a `ref`:
+`useResizeObserver` can alternatively take an `HTMLElement` such as the return
+value from `document.querySelector()`.
 
 ```jsx
 const Example = () => {

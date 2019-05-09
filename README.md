@@ -1,6 +1,6 @@
 # use-resize-observer
 
-[![NPM](https://img.shields.io/npm/v/use-resize-observer.svg?&color=green)](https://www.npmjs.com/package/@asyarb/use-resize-observer)
+[![NPM](https://img.shields.io/npm/v/@asyarb/use-resize-observer.svg?&color=green)](https://www.npmjs.com/package/@asyarb/use-resize-observer)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@asyarb/use-resize-observer.svg?logoColor=brightgreen)
 
 React implementation of the

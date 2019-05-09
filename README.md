@@ -27,10 +27,10 @@ Run the following:
 
 ```bash
 # Yarn
-yarn add use-resize-observer
+yarn add @asyarb/use-resize-observer
 
 # NPM
-npm i use-resize-observer --save
+npm i @asyarb/use-resize-observer --save
 ```
 
 # Usage

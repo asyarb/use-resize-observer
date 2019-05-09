@@ -1,5 +1,5 @@
 {
-  "name": "use-resize-observer",
+  "name": "@asyarb/use-resize-observer",
   "version": "1.1.1",
   "description": "An easy to use React hook wrapper around the ResizeObserver API.",
   "main": "dist/index.cjs.js",

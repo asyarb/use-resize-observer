@@ -1,10 +1,13 @@
 # use-resize-observer
 
+[![NPM](https://img.shields.io/npm/v/use-resize-observer.svg?&color=green)](https://www.npmjs.com/package/@asyarb/use-resize-observer)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@asyarb/use-resize-observer.svg?logoColor=brightgreen)
+
 React implementation of the
 [Resize Observer Interface](https://developer.mozilla.org/en-US/docs/Web/API/ResizeObserver)
 to tell you when an element resizes.
 
-**Demo**: TODO
+**Demo**: [Code Sandbox](https://codesandbox.io/s/74n0p5xr0j)
 
 # Features
 
@@ -14,7 +17,7 @@ to tell you when an element resizes.
   an optional function to handle `ResizeObserver` callbacks.
 - 💨 **Optimized Performance** - Reuses `ResizeObserver` instances whenever
   possible.
-- 💥 **Tiny Footprint**
+- 💥 **Tiny Footprint** - 350 bytes!
 
 > ⚠️ It's recommended to add
 > [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill)

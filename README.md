@@ -64,7 +64,7 @@ const Example = () => {
 
 Alternatively, you can pass a function as the second parameter to perform any
 side effect on resize. This function receives the `ResizeObserver` entry
-(`DOMRectReadOnly`) object as an argument.
+(`ResizeObserverEntry`) object as an argument.
 
 ```jsx
 const Example = () => {

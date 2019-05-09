@@ -1,18 +1,24 @@
 # use-resize-observer
 
-React implementation of the [Resize Observer API] to tell you when an element resizes.
+React implementation of the [Resize Observer API] to tell you when an element
+resizes.
 
 **Demo**: TODO
 
 # Features
 
-- 🎣 **Hooks API** - With `useResizeObserver` it's easier than ever to monitor the size changes of your elements.
-- ⚙️ **Simple Native API** - Intuitive to use.
-- 💨 **Optimized Performance** - Attempts to reuse Resize Observer instances whenever possible.
+- 🎣 **Hooks API** - With `useResizeObserver` it's easier than ever to monitor
+  the size changes of your elements. Just pass a ref!
+- ⚙️ **Alternative Native API** - Intuitive to use. Pass a dom element and an
+  optional function to handle resizeObserver callbacks.
+- 💨 **Optimized Performance** - Reuse Resize Observer instances whenever
+  possible.
 - 💥 **Tiny Footprint**
 
-> ⚠️ It's recommended to add [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill)
-> for full browser support. This package dynamically polyfills ResizeObserver based on the browser.
+> ⚠️ It's recommended to add
+> [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill)
+> for full browser support. This package dynamically polyfills ResizeObserver
+> based on the browser.
 
 # Installation
 

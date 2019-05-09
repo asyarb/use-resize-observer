@@ -19,8 +19,10 @@ export const useResizeObserver = (ref, fn) => {
   const [resizeObs] = useState(() => new ResizeObserver(handleResize))
 
   useEffect(() => {
-    const domNodeRef = ref.current
-    if (domNodeRef) resizeObs.observe(domNodeRef)
+    if (ref) {
+      const domNode = ref.hasOwnProperty('current') ? ref.current : ref
+      resizeObs.observe(domNode)
+    }
 
     return () => resizeObs.disconnect()
   }, [ref, resizeObs])

@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.4](https://github.com/asyarb/use-resize-observer/compare/v1.1.3...v1.1.4) (2019-05-20)
+
+
+### Bug Fixes
+
+* changelog ([2473c81](https://github.com/asyarb/use-resize-observer/commit/2473c81))
+* isbrowser constant ([d78bce1](https://github.com/asyarb/use-resize-observer/commit/d78bce1))
+
+
+
 ### [1.1.2](https://github.com/asyarb/use-resize-observer/compare/v1.1.1...v1.1.2) (2019-05-20)
 
 ### Bug Fixes

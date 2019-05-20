@@ -1,5 +1,7 @@
 import { useEffect, useState, useCallback } from 'react'
 
+const IS_BROWSER = typeof window !== undefined
+
 export const useResizeObserver = (ref, fn) => {
   const [sizes, setSizes] = useState({})
 
@@ -16,7 +18,9 @@ export const useResizeObserver = (ref, fn) => {
     [fn]
   )
 
-  const [resizeObs] = useState(() => new ResizeObserver(handleResize))
+  const [resizeObs] = useState(() =>
+    IS_BROWSER ? new ResizeObserver(handleResize) : null
+  )
 
   useEffect(() => {
     if (ref) {

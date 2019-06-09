@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/asyarb/use-resize-observer/compare/v1.1.4...v1.2.0) (2019-06-09)
+
+
+### Features
+
+* update deps, remove usecallback ([74a17a4](https://github.com/asyarb/use-resize-observer/commit/74a17a4))
+
+
+
 ### [1.1.4](https://github.com/asyarb/use-resize-observer/compare/v1.1.3...v1.1.4) (2019-05-20)
 
 

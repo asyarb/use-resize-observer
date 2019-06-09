@@ -22,7 +22,10 @@
   "keywords": [
     "react",
     "hooks",
-    "resize observer"
+    "resize",
+    "observer",
+    "web",
+    "polyfill"
   ],
   "author": "Anthony Yarbrough",
   "license": "MIT",

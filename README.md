@@ -102,8 +102,8 @@ const Example = () => {
 }
 ```
 
-Just like with the hooks-based API, you can alternatively provide a function as
-a second parameter.
+Just like the previous example, you can alternatively provide a callback
+function instead.
 
 # License
 

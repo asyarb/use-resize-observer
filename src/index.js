@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import ResizeObserver from 'resize-observer-polyfill'
 
 const IS_BROWSER = typeof window !== 'undefined'
 

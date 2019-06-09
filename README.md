@@ -13,15 +13,15 @@ to tell you when an element resizes.
 
 - 🎣 **Hooks API** - With `useResizeObserver` it's easier than ever to monitor
   the size changes of your elements. Just pass a ref!
-- ⚙️ **Alternative Native-esque API** - Intuitive to use. Pass an `HTMLElement` and
-  an optional function to handle `ResizeObserver` callbacks.
+- ⚙️ **Alternative Native-esque API** - Intuitive to use. Pass an `HTMLElement`
+  and an optional function to handle `ResizeObserver` callbacks.
 - 💨 **Optimized Performance** - Reuses `ResizeObserver` instances whenever
   possible.
-- 💥 **Tiny Footprint** - Less than 1 KB!
+- 💥 **Tiny Footprint**
 
-> ⚠️ It's recommended to add
+> ⚠️ This package includes
 > [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill)
-> for full browser support. This package dynamically ponyfills `ResizeObserver`
+> for full browser support. This package ponyfills `ResizeObserver` at runtime
 > based on the browser.
 
 # Installation

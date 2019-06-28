@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/asyarb/use-resize-observer/compare/v1.3.1...v1.4.0) (2019-06-28)
+
+
+### Features
+
+* swap to microbundle for buld step ([bd8e78a](https://github.com/asyarb/use-resize-observer/commit/bd8e78a))
+
+
+
 ### [1.3.1](https://github.com/asyarb/use-resize-observer/compare/v1.3.0...v1.3.1) (2019-06-09)
 
 

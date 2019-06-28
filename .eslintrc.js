@@ -3,6 +3,7 @@ module.exports = {
   rules: {
     'no-var': 'warn',
     'no-unused-vars': 'warn',
+    'no-undef': 'error',
 
     // react plugin - options
     'react/jsx-uses-react': 'warn',

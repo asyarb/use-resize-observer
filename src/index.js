@@ -7,7 +7,7 @@ export const useResizeObserver = (ref, fn) => {
   const [sizes, setSizes] = useState({})
 
   const handleResize = entries => {
-    const [entry] = entries.map(entry => entry)
+    const [entry] = entries
 
     if (fn) {
       fn(entry)

@@ -4,7 +4,7 @@
   "description": "An easy to use React hook wrapper around the ResizeObserver API.",
   "main": "dist/index.js",
   "source": "src/index.js",
-  "modern": "dist/index.m.js",
+  "modern": "dist/index.mjs",
   "scripts": {
     "build": "microbundle -o dist/index.js --compress true",
     "watch": "microbundle watch -o dist/index.js --compress false",

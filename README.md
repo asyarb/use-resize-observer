@@ -1,4 +1,12 @@
-# use-resize-observer
+# use-resize-observer <!-- omit in toc -->
+
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+    - [Provide a `ref` from `useRef`](#provide-a-ref-from-useref)
+    - [Provide a DOM element](#provide-a-dom-element)
+  - [API](#api)
+- [License](#license)
 
 [![NPM](https://img.shields.io/npm/v/@asyarb/use-resize-observer.svg?&color=green)](https://www.npmjs.com/package/@asyarb/use-resize-observer)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@asyarb/use-resize-observer.svg?logoColor=brightgreen)
@@ -101,6 +109,15 @@ const Example = () => {
 
 Just like the previous example, you can alternatively provide a callback
 function instead.
+
+## API
+
+| Argument | Required | Description                              |
+| :------: | :------: | ---------------------------------------- |
+|  `ref`   |   Yes    | React `ref` or `HTMLElement` to observe. |
+
+| `callback` | No | Optional callback to fire on resize. Receives the
+`ResizeObserverEntry` object for the passed `ref` or `HTMLElement` |
 
 # License
 

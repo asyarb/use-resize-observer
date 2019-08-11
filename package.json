@@ -5,6 +5,7 @@
   "main": "dist/index.js",
   "source": "src/index.js",
   "modern": "dist/index.mjs",
+  "types": "./use-resize-observer.d.ts",
   "scripts": {
     "build": "microbundle -o dist/index.js --compress true",
     "watch": "microbundle watch -o dist/index.js --compress false",

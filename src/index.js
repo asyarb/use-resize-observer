@@ -3,14 +3,14 @@ import ResizeObserver from 'resize-observer-polyfill'
 
 const IS_BROWSER = typeof window !== 'undefined'
 
-export const useResizeObserver = (ref, fn) => {
+export const useResizeObserver = (ref, callback) => {
   const [sizes, setSizes] = useState({})
 
   const handleResize = entries => {
     const [entry] = entries
 
-    if (fn) {
-      fn(entry)
+    if (callback) {
+      callback(entry)
       return
     }
 

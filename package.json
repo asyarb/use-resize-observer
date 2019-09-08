@@ -3,17 +3,16 @@
   "version": "1.6.1",
   "description": "An easy to use React hook wrapper around the ResizeObserver API.",
   "main": "dist/index.js",
-  "source": "src/index.js",
-  "modern": "dist/index.mjs",
-  "types": "./use-resize-observer.d.ts",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "microbundle -o dist/index.js --compress true",
-    "watch": "microbundle watch -o dist/index.js --compress false",
-    "format": "prettier --write 'src/**/*.js' 'rollup.config.js' 'README.md'",
-    "prebuild": "rimraf dist",
-    "prepublish": "yarn build",
-    "release": "standard-version",
-    "test": "jest"
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom",
+    "lint": "tsdx lint",
+    "release": "standard-version"
   },
   "homepage": "https://github.com/asyarb/use-resize-observer",
   "repository": {
@@ -31,19 +30,19 @@
   "author": "Anthony Yarbrough",
   "license": "MIT",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.5.5",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
-    "babel-eslint": "^10.0.2",
-    "eslint": "^6.1.0",
-    "eslint-plugin-react": "^7.14.3",
-    "eslint-plugin-react-hooks": "^1.7.0",
-    "husky": "^3.0.3",
-    "microbundle": "^0.11.0",
-    "prettier": "^1.18.2",
-    "rimraf": "^2.6.3",
-    "standard-version": "^7.0.0"
+    "@testing-library/jest-dom": "^4.1.0",
+    "@testing-library/react": "^9.1.4",
+    "@types/jest": "^24.0.18",
+    "@types/react": "^16.9.2",
+    "husky": "^3.0.5",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0",
+    "standard-version": "^7.0.0",
+    "tsdx": "^0.9.1",
+    "tslib": "^1.10.0",
+    "typescript": "^3.6.2"
   },
   "peerDependencies": {
     "react": ">=16.8"

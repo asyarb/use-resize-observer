@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/asyarb/use-resize-observer/compare/v1.6.1...v2.0.0) (2019-09-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* Hook now accepts arguments through an object, html elements must be provided through element key
+
+* document new API ([b3e4a69](https://github.com/asyarb/use-resize-observer/commit/b3e4a69))
+
+
+### Features
+
+* example ([0751468](https://github.com/asyarb/use-resize-observer/commit/0751468))
+* init typescript ([530e1f1](https://github.com/asyarb/use-resize-observer/commit/530e1f1))
+* typescript implementation ([f131b2f](https://github.com/asyarb/use-resize-observer/commit/f131b2f))
+
 ### [1.6.1](https://github.com/asyarb/use-resize-observer/compare/v1.6.0...v1.6.1) (2019-08-11)
 
 ## [1.6.0](https://github.com/asyarb/use-resize-observer/compare/v1.5.1...v1.6.0) (2019-08-11)

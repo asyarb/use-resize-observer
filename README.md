@@ -20,9 +20,10 @@ to tell you when an element resizes.
 # Features
 
 - **Hooks API** - Just pass a ref!
-- **Alternative Native-esque API** - Pass an `HTMLElement` and an optional
-  function to handle `ResizeObserver` callbacks.
+- **Alternative Native-esque API** - Pass an `Element` and an optional function
+  to handle `ResizeObserver` callbacks.
 - **Performant** - Reuses `ResizeObserver` instances whenever possible.
+- **Typed** - Written with TypeScript!
 
 > ⚠️ This package includes
 > [`resize-observer-polyfill`](https://www.npmjs.com/package/resize-observer-polyfill)
@@ -45,7 +46,7 @@ npm i @asyarb/use-resize-observer --save
 
 ### Provide a `ref` from `useRef`
 
-To observe the resizing of a component, pass a `ref` of that component to
+To observe the resizing of a component, pass a `ref` for a component to
 `useResizeObserver`:
 
 ```jsx
@@ -54,12 +55,10 @@ const Example = () => {
   const [height, setHeight] = useState(0)
 
   // Get the content rect directly from the hook:
-  const sizes = useResizeObserver(ref)
+  const sizes = useResizeObserver({ ref })
 
-  useEffect(() => {
-    // Perform any side effect with those sizes!
-    setHeight(sizes.height)
-  }, [sizes])
+  // Perform any side effect with those sizes!
+  useEffect(() => void setHeight(sizes.height), [sizes])
 
   return <div ref={ref}>Some content...</div>
 }
@@ -76,9 +75,10 @@ const Example = () => {
   const ref = useRef
   const [height, setHeight] = useState(0)
 
-  // Pass an optional callback to perform side effects instead:
-  useResizeObserver(ref, entry => {
-    setHeight(entry.contentRect.height)
+  // Provide an optional callback to perform side effects instead:
+  useResizeObserver({
+    ref,
+    callback: entry => setHeight(entry.contentRect.height),
   })
 
   return <div ref={ref}>Some content...</div>
@@ -91,33 +91,30 @@ const Example = () => {
 value from `document.querySelector()`.
 
 ```jsx
+const element = document.querySelector('.someClass')
+
 const Example = () => {
   const [height, setHeight] = useState(0)
-  const domNode = document.querySelector('.someClass')
 
   // Pass an HTMLElement directly:
-  const sizes = useResizeObserver(domNode)
+  const sizes = useResizeObserver({ element })
 
-  useEffect(() => {
-    // Perform any side effect with that element's sizes!
-    setHeight(sizes.height)
-  }, [sizes])
+  // Perform any side effect with that element's sizes!
+  useEffect(() => void setHeight(sizes.height), [sizes])
 
   return <div ref={ref}>Some content...</div>
 }
 ```
 
-Just like the previous example, you can alternatively provide a callback
-function instead.
+Just like the previous example, you can also provide a callback function.
 
 ## API
 
-| Argument | Required | Description                              |
-| :------: | :------: | ---------------------------------------- |
-|  `ref`   |   Yes    | React `ref` or `HTMLElement` to observe. |
-
-| `callback` | No | Optional callback to fire on resize. Receives the
-`ResizeObserverEntry` object for the passed `ref` or `HTMLElement` |
+| Argument   | Required | Description                                                                                                     |
+| ---------- | :------: | --------------------------------------------------------------------------------------------------------------- |
+| `ref`      |    NP    | React `ref` to observe.                                                                                         |
+| `element`  |    No    | HTML `Element` to observe. If both `ref` and `element` are provided, `ref` is prioritized.                      |
+| `callback` |    No    | Optional callback to fire on resize. Receives the `ResizeObserverEntry` for the observed element as an argument |
 
 # License
 

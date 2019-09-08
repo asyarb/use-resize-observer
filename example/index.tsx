@@ -26,22 +26,20 @@ export const Example = () => {
           padding: '3rem',
         }}
       />
-      {rect && (
-        <div
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            color: 'white',
-            width: `${rect.width / 2}px`,
-            height: `${rect.height / 2}px`,
-            backgroundColor: 'green',
-            padding: '3rem',
-          }}
-        >
-          I am always half the size!
-        </div>
-      )}
+      <div
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          color: 'white',
+          width: `${rect.width / 2}px`,
+          height: `${rect.height / 2}px`,
+          backgroundColor: 'green',
+          padding: '3rem',
+        }}
+      >
+        I am always half the size!
+      </div>
     </div>
   )
 }

@@ -19,10 +19,9 @@ to tell you when an element resizes.
 
 # Features
 
-- **Hooks API** - Just pass a ref!
-- **Alternative Native-esque API** - Pass an `Element` and an optional function
-  to handle `ResizeObserver` callbacks.
-- **Performant** - Reuses `ResizeObserver` instances whenever possible.
+- **Hooks** - Just pass a ref!
+- **Alternative API** - Pass an `Element` and an optional function to handle
+  `ResizeObserver` callbacks.
 - **Typed** - Written with TypeScript!
 
 > ⚠️ This package includes

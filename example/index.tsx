@@ -1,11 +1,23 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState, useEffect } from 'react'
 import ReactDOM from 'react-dom'
 
 import { useResizeObserver } from '../.'
 
 export const Example = () => {
   const ref = useRef<HTMLDivElement>(null)
+  const [sizes, setSizes] = useState({ width: '200px', height: '200px' })
   const rect = useResizeObserver({ ref })
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSizes(sizes => {
+        if (sizes.width === '200px') return { width: '100px', height: '100px' }
+        else return { width: '200px', height: '200px' }
+      })
+    }, 3000)
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div
@@ -18,12 +30,12 @@ export const Example = () => {
       <div
         ref={ref}
         style={{
-          width: '300px',
-          height: '300px',
+          width: sizes.width,
+          height: sizes.height,
           backgroundColor: 'blue',
-          resize: 'both',
-          overflow: 'auto',
           padding: '3rem',
+          transitionProperty: 'width, height',
+          transition: 'width .5s ease, height .5s ease',
         }}
       />
       <div
